@@ -70,17 +70,11 @@
                     charList2.Add(letter);
                 }
             });
-            Console.WriteLine("-------------------------");
-            if (upperCharFiff >= 0)
-            {
-                charList1.ForEach((el) => Console.Write(el + " "));
-            }
-            else
-            {
-                charList2.ForEach((el) => Console.Write(el + " "));
-            }
 
-            Console.WriteLine("\n-------------------------");
+            Console.WriteLine("-------------------------");
+            Console.WriteLine("Array:" + (upperCharFiff >= 0 ? "1" : 2));
+            Console.WriteLine("-------------------------");
+
             charList1.ForEach((el) => Console.Write(el + " "));
             Console.WriteLine();
             charList2.ForEach((el) => Console.Write(el + " "));
