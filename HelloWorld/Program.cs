@@ -24,61 +24,62 @@
             List<int> intList1 = new ();
             List<int> intList2 = new ();
 
-            Array.ForEach(array, (el) =>
+            for (int i = 0; i < array.Length; i++)
             {
-                if (el % 2 == 0)
+                if (array[i] % 2 == 0)
                 {
-                    intList1.Add(el);
+                    intList1.Add(array[i]);
                 }
                 else
                 {
-                    intList2.Add(el);
+                    intList2.Add(array[i]);
                 }
-            });
+            }
 
             List<char> charList1 = new ();
             List<char> charList2 = new ();
 
-            string upperChar = "aeidhj";
+            string upperChars = "aeidhj";
 
-            int upperCharFiff = 0;
+            int upperCharsFiff = 0;
 
-            intList1.ForEach((el) =>
+            for (int i = 0; i < intList1.Count; i++)
             {
-                char letter = (char)((int)'a' + el - 1);
-                if (upperChar.Contains(letter))
+                char letter = (char)((int)'a' + intList1[i] - 1);
+                if (upperChars.Contains(letter))
                 {
                     charList1.Add(char.ToUpper(letter));
-                    upperCharFiff++;
+                    upperCharsFiff++;
                 }
                 else
                 {
                     charList1.Add(letter);
                 }
-            });
+            }
 
-            intList2.ForEach((el) =>
+            for (int i = 0; i < intList2.Count; i++)
             {
-                char letter = (char)((int)'a' + el - 1);
-                if (upperChar.Contains(letter))
+                char letter = (char)((int)'a' + intList2[i] - 1);
+                if (upperChars.Contains(letter))
                 {
                     charList2.Add(char.ToUpper(letter));
-                    upperCharFiff--;
+                    upperCharsFiff--;
                 }
                 else
                 {
                     charList2.Add(letter);
                 }
-            });
+            }
 
             Console.WriteLine("-------------------------");
 
-            Console.WriteLine("Array: " + (upperCharFiff >= 0 ? "1" : "2"));
+            Console.WriteLine("Array: " + (upperCharsFiff >= 0 ? "1" : "2"));
             Console.WriteLine("-------------------------");
 
             charList1.ForEach((el) => Console.Write(el + " "));
             Console.WriteLine();
             charList2.ForEach((el) => Console.Write(el + " "));
+            Console.ReadLine();
         }
     }
 }
