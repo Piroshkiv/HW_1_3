@@ -76,9 +76,17 @@
             Console.WriteLine("Array: " + (upperCharsFiff >= 0 ? "1" : "2"));
             Console.WriteLine("-------------------------");
 
-            charList1.ForEach((el) => Console.Write(el + " "));
+            for (int i = 0; i < charList1.Count; i++)
+            {
+                Console.Write(charList1[i] + " ");
+            }
+
             Console.WriteLine();
-            charList2.ForEach((el) => Console.Write(el + " "));
+            for (int i = 0; i < charList2.Count; i++)
+            {
+                Console.Write(charList2[i] + " ");
+            }
+
             Console.ReadLine();
         }
     }
